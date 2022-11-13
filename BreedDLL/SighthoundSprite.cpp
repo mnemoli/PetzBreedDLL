@@ -24,13 +24,13 @@ void SighthoundSprite::InitBreedSprite(LoadInfo const& loadinfo, char* str, bool
 void SighthoundSprite::ConstructGenome(Genome& genome)
 {
 	PetSprite::ConstructGenome(genome);
-	EZSetGeneGoalTrait(genome, (BehaviorTrait)0, (TraitLevel)3);
-	EZSetGeneGoalTrait(genome, (BehaviorTrait)1, (TraitLevel)3);
-	EZSetGeneGoalTrait(genome, (BehaviorTrait)2, (TraitLevel)2);
-	EZSetGeneGoalTrait(genome, (BehaviorTrait)3, (TraitLevel)3);
-	EZSetGeneGoalTrait(genome, (BehaviorTrait)4, (TraitLevel)1);
-	EZSetGeneGoalTrait(genome, (BehaviorTrait)5, (TraitLevel)1);
-	EZSetGeneGoalTrait(genome, (BehaviorTrait)6, (TraitLevel)1);
+	EZSetGeneGoalTrait(genome, Liveliness, High);
+	EZSetGeneGoalTrait(genome, Playfulness, High);
+	EZSetGeneGoalTrait(genome, Independence, Medium);
+	EZSetGeneGoalTrait(genome, Confidence, High);
+	EZSetGeneGoalTrait(genome, Naughtiness, Low);
+	EZSetGeneGoalTrait(genome, Acrobaticness, Low);
+	EZSetGeneGoalTrait(genome, Patience, Low);
 }
 
 const unsigned int SighthoundSprite::SighthoundUActionMapping[] = { 0x000001B0,
