@@ -1,0 +1,6 @@
+LIBRARY
+EXPORTS
+	GetDLLVersion
+	GetLoadInfo
+	GetSprite
+	GetFilmstrip
