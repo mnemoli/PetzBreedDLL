@@ -1,5 +1,8 @@
 #include "pch.h"
 #include "SighthoundSprite.h"
+#include "Genetics.h"
+
+using namespace Petz;
 
 void SighthoundSprite::InitPersonalityBiorhythms()
 {
@@ -31,6 +34,14 @@ void SighthoundSprite::ConstructGenome(Genome& genome)
 	EZSetGeneGoalTrait(genome, Naughtiness, Low);
 	EZSetGeneGoalTrait(genome, Acrobaticness, Low);
 	EZSetGeneGoalTrait(genome, Patience, Low);
+	EZSetGeneSpriteTrait(genome, Mouselike, Low);
+	auto a = genome.gamete1[0]->alleles[Color];
+	a.AddState(Orange);
+	genome.gamete1[0]->alleles[Color] = a;
+	a = genome.gamete1[0]->alleles[Flavor];
+	a.AddState(Garbage);
+	genome.gamete1[0]->alleles[Flavor] = a;
+
 }
 
 const unsigned int SighthoundSprite::SighthoundUActionMapping[] = { 0x000001B0,

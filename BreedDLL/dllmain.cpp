@@ -31,7 +31,7 @@ long GetDLLVersion() {
     return 0x44000007;
 }
 
-bool GetLoadInfo(pfvector<LoadInfo, const char*>& loadInfoVector, ELoadType loadType, char const* someString, XLibraryList* xLibraryList) {
+bool GetLoadInfo(pfvector<LoadInfo>& loadInfoVector, ELoadType loadType, char const* someString, XLibraryList* xLibraryList) {
     return XDownload::GetDefaultLoadInfoFromDLL(loadInfoVector, loadType, someString, xLibraryList);
 }
 
