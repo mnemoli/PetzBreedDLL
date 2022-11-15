@@ -15,13 +15,13 @@ int SighthoundSprite::MapBreedSpecificAction(UAction uaction)
 
 void SighthoundSprite::InitBreedSprite(LoadInfo const& loadinfo, bool a)
 {
-	PetSprite::InitPetSprite(loadinfo, (EChrz)1, (char*)R"(\ptzfiles\dh\dh.lnz)", (char*)R"(\ptzfiles\dog\dog.scp)", (char*)R"(\ptzfiles\dog\dh\dh.scp)", a, 0x32);
+	PetSprite::InitPetSprite(loadinfo, EChrz::Dog, (char*)R"(\ptzfiles\dh\dh.lnz)", (char*)R"(\ptzfiles\dog\dog.scp)", (char*)R"(\ptzfiles\dog\dh\dh.scp)", a, 0x32);
 	GetBannerDataFromFile(R"(\Ptzfiles\Dog\dh\BEvent_Dog_dh.txt)", banners);
 }
 
 void SighthoundSprite::InitBreedSprite(LoadInfo const& loadinfo, char* str, bool a, bool b)
 {
-	PetSprite::InitPetSprite(loadinfo, (EChrz)1, str, (char*)R"(\ptzfiles\dog\dog.scp)", (char*)R"(\ptzfiles\dog\dh\dh.scp)", a, b);
+	PetSprite::InitPetSprite(loadinfo, EChrz::Dog, str, (char*)R"(\ptzfiles\dog\dog.scp)", (char*)R"(\ptzfiles\dog\dh\dh.scp)", a, b);
 }
 
 void SighthoundSprite::ConstructGenome(Genome& genome)
